@@ -13,7 +13,7 @@ Babel полагается на наличие файла babel.config.js в к�
 
 module.exports = {
   presets: [
-    ['@babel/env', {
+    ['@babel/preset-env', {
       targets: {
         node: 'current',
         firefox: '60',
