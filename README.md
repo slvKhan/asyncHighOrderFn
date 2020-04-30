@@ -1,7 +1,8 @@
 
 <a href="https://codeclimate.com/github/slvKhan/asyncHighOrderFn/maintainability"><img src="https://api.codeclimate.com/v1/badges/4463842717293640e32a/maintainability" /></a>
+<a href="https://codeclimate.com/github/slvKhan/asyncHighOrderFn/test_coverage"><img src="https://api.codeclimate.com/v1/badges/4463842717293640e32a/test_coverage" /></a>
 
-<h1>Babel<h1>
+<h2>Babel</h2>
 npm install --save-dev @babel/core @babel/cli @babel/node @babel/preset-env
 
 Пакет @babel/core содержит код, который выполняет всю работу по трансляции, но не содержит внутри себя правил преобразования. Правила описаны в отдельных пакетах, называемых плагинами (например, babel-plugin-transform-constant-string).
@@ -13,6 +14,7 @@ Babel полагается на наличие файла babel.config.js в к�
 
 Этот файл нужно создать самостоятельно. Если вы забудете добавить туда плагин или пресет, то на выходе Babel отдаст тот же код, что был и на входе.
 
+<pre>
 module.exports = {
   presets: [
     ['@babel/preset-env', {
@@ -25,3 +27,4 @@ module.exports = {
     }],
   ],
 };
+</pre>
