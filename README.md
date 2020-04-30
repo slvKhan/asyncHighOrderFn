@@ -1,5 +1,7 @@
 
-Babel
+<a href="https://codeclimate.com/github/slvKhan/asyncHighOrderFn/maintainability"><img src="https://api.codeclimate.com/v1/badges/4463842717293640e32a/maintainability" /></a>
+
+<h1>Babel<h1>
 npm install --save-dev @babel/core @babel/cli @babel/node @babel/preset-env
 
 Пакет @babel/core содержит код, который выполняет всю работу по трансляции, но не содержит внутри себя правил преобразования. Правила описаны в отдельных пакетах, называемых плагинами (например, babel-plugin-transform-constant-string).
