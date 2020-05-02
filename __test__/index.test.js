@@ -1,10 +1,11 @@
 import { map, mapAsync } from '../src/map';
 import { filter, filterAsync } from '../src/filter';
 
+const list = [1, 5, 7, -5, 0];
+
 test('myMap', () => {
 	const callback = (el) => el * 2;
 	const callback2 = (el) => el + 1;
-	const list = [1, 5, 7, -5, 0];
 
 	expect(map(list, callback)).toEqual(list.map(callback));
 	expect(map(list, callback2)).toEqual(list.map(callback2));
@@ -12,7 +13,6 @@ test('myMap', () => {
 
 test('asyncMap', () => {
 	const callback = (el) => el * 2;
-	const list = [1, 5, 7, -5, 0];
 
 	mapAsync(list, callback, (res) => {
 		expect(res).toEqual(list.map(callback));
@@ -21,7 +21,6 @@ test('asyncMap', () => {
 
 test('asyncFilter', () => {
 	const callback = (el) => el > 4;
-	const list = [1, 5, 7, -5, 0];
 
 	filterAsync(list, callback, (res) => {
 		expect(res).toEqual(list.filter(callback));
@@ -29,7 +28,6 @@ test('asyncFilter', () => {
 })
 
 test('myFilter', () => {
-	const list = [1, 5, 7, -5, 0];
 	const callback = (el) => el > 4;
 	expect(filter(list, callback)).toEqual(list.filter(callback));
 });
